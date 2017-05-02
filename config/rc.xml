@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<theme>
+	<name>Default</name>
+</theme>
+<applications>
+	<application class="*">
+		<decor>no</decor>
+		<maximized>yes</maximized>
+	</application>
+	<application class="*retroarch*">
+		<desktop>1</desktop>
+	</application>
+</applications>
+
+</openbox_config>
