@@ -50,4 +50,5 @@ cat <<- EOF >> "$CCONFIG"
 	#input_menu_toggle_btn = "10"
 EOF
 
-$1 -L /usr/lib/libretro/$2.so --appendconfig "$CCONFIG" "$3"
+#$1 -L /usr/lib/libretro/$2.so --appendconfig "$CCONFIG" --verbose "$3" --verbose > /home/kiosk/.emu/retroarch.log 2>&1
+$1 -L /usr/lib/libretro/$2.so --verbose "$3" --verbose > /home/kiosk/.emu/retroarch.log 2>&1
