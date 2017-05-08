@@ -50,5 +50,15 @@ cat <<- EOF >> "$CCONFIG"
 	#input_menu_toggle_btn = "10"
 EOF
 
+CORE_CONFIG=""
+CORE_CONFIG_PATH="/home/kiosk/.config/retroarch/configs/cores/$2.cfg"
+if [ -f "$CORE_CONFIG_PATH" ]
+then
+	CORE_CONFIG="--appendconfig="$CORE_CONFIG_PATH""
+fi
+
+echo "$CORE_CONFIG_PATH" > /home/kiosk/.emu/test.log
+echo "$CORE_CONFIG" >> /home/kiosk/.emu/test.log
+
 #$1 -L /usr/lib/libretro/$2.so --appendconfig "$CCONFIG" --verbose "$3" --verbose > /home/kiosk/.emu/retroarch.log 2>&1
-$1 -L /usr/lib/libretro/$2.so --verbose "$3" --verbose > /home/kiosk/.emu/retroarch.log 2>&1
+$1 -L /usr/lib/libretro/$2.so --verbose --verbose $CORE_CONFIG "$3" > /home/kiosk/.emu/retroarch.log 2>&1
