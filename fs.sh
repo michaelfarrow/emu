@@ -12,6 +12,7 @@ sudo mkdir -p "$home/.emu/roms/Nintendo (NES)"
 sudo mkdir -p "$home/.config/devilspie2"
 sudo mkdir -p "$home/.config/retroarch"
 sudo mkdir -p "$home/.config/retroarch/configs/all"
+sudo mkdir -p "$home/.config/retroarch/configs/cores"
 sudo mkdir -p "$home/.config/openbox"
 sudo mkdir -p "$home/.themes/Default/openbox-3"
 
