@@ -9,7 +9,10 @@ SERVICES="$scriptdir/services/*.conf"
 SCRIPTS="$scriptdir/services/*.sh"
 
 sudo cp $SCRIPTS "$home/.emu/services/"
+sudo cp -r "$scriptdir/services/tidy" "$home/.emu/services"
+
 sudo chown -R kiosk:kiosk "$home/.emu/services/"
+sudo -u kiosk HOME="$home" bash -c "cd $home/.emu/services/tidy && npm install"
 
 for service in $SERVICES
 do
