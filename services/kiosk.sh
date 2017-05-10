@@ -10,4 +10,5 @@ sleep 1
 
 start-pulseaudio-x11
 
-/usr/bin/emulationstation --windowed --no-exit --vsync 1
+/usr/local/bin/emulationstation --windowed --vsync 1
+#--no-exit
