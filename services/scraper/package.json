@@ -21,6 +21,8 @@
     "alphanum-sort": "1.0.2",
     "fs-extra": "3.0.1",
     "moment": "2.18.1",
-    "standard": "10.0.2"
+    "standard": "10.0.2",
+    "sharp": "0.17.3",
+    "elasticlunr": "0.9.5"
   }
 }
